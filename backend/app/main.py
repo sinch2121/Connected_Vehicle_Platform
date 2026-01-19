@@ -1,5 +1,9 @@
 from fastapi import FastAPI
 from backend.app.api import ingestion
+from backend.app.api import features
+from backend.app.api import profiling
+from backend.app.api import risk
+
 
 app = FastAPI(
     title="Connected Vehicle Intelligence Platform",
@@ -8,6 +12,9 @@ app = FastAPI(
 )
 
 app.include_router(ingestion.router, prefix="/api")
+app.include_router(features.router, prefix="/api")
+app.include_router(profiling.router, prefix="/api")
+app.include_router(risk.router, prefix="/api")
 
 @app.get("/")
 def root():
