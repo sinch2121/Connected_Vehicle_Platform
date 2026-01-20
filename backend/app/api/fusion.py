@@ -8,5 +8,6 @@ def run_fusion():
     df = fuse_risk_and_anomaly()
     return {
         "message": "Hybrid fusion completed",
-        "records_fused": len(df)
+        "records": df.to_dict(orient="records")
     }
+

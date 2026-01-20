@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+button {
+  margin: 6px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #125ea6;
+}
+
+.status-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.status-list li {
+  margin-bottom: 4px;
+}
+
+/* KPI styles */
+.kpi-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.kpi-card {
+  flex: 1;
+  min-width: 160px;
+  padding: 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.kpi-low {
+  background-color: #2e7d32;
+}
+
+.kpi-medium {
+  background-color: #ed6c02;
+}
+
+.kpi-critical {
+  background-color: #d32f2f;
+}
+
+.kpi-neutral {
+  background-color: #455a64;
+}
+
+/* Table highlight */
+tr.critical-row {
+  background-color: #ffebee;
+  color: #b71c1c;
+  font-weight: bold;
+}
