@@ -3,6 +3,8 @@ from backend.app.api import ingestion
 from backend.app.api import features
 from backend.app.api import profiling
 from backend.app.api import risk
+from backend.app.api import ml
+from backend.app.api import fusion
 
 
 app = FastAPI(
@@ -15,6 +17,8 @@ app.include_router(ingestion.router, prefix="/api")
 app.include_router(features.router, prefix="/api")
 app.include_router(profiling.router, prefix="/api")
 app.include_router(risk.router, prefix="/api")
+app.include_router(ml.router, prefix="/api")
+app.include_router(fusion.router, prefix="/api")
 
 @app.get("/")
 def root():
